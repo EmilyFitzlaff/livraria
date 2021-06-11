@@ -81,11 +81,11 @@
             $aDados = $this->returnSelectAll();
             echo "<label for='categoria'>{$descricao}</label>";
             echo "<select name='categoria' class='form-control'>";
-            echo $selected;
+            if (empty($selected)) {
+                echo "<option disabled selected>Selecione uma categoria</option>";
+            }
             foreach ($aDados as $oObjeto){
-                if (empty($selected)) {
-                    echo "<option disabled selected>Selecione uma categoria</option>";
-                }
+                
                 if(!empty($selected) && ($selected = $oObjeto->getCodigo())) {
                     echo "<option value='{$oObjeto->getCodigo()}' selected>{$oObjeto->getDescricao()}</option>";
                 } else {

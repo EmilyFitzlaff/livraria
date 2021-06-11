@@ -95,7 +95,7 @@
             if(isset($_POST['alterar'])) {
                 try {
                     $stmt = Conexao::Conectar()->prepare("UPDATE livro set descricao = '{$descricao}', dataPublicacao = '{$dataPublicacao}', categoria_codigo = $categoria, autor_codigo = $autor, editora_codigo = $editora WHERE codigo = {$codigo}");
-
+                   
                     $stmt->execute();
 
                     if (!$stmt->execute()){
@@ -107,7 +107,7 @@
                     exit;
 
                 } catch(PDOException $erro) {
-                    
+                    var_dump($erro);
                     echo semAlteracao();
                 }
             }

@@ -40,8 +40,8 @@
                             $resultado = $stmt->fetchAll();   
                         }
                     
-                        if(isset($_POST['livro_descricao']) || isset($_POST['dataPublicacao']) || isset($_POST['autor']) || isset($_POST['categoria']) || isset($_POST['editora'])) {                    
-                            $oLivro->alterarLivro($_GET['registro'], $_POST['livro_descricao'], $_POST['livro_dataPublicacao'], $_POST['autor'], $_POST['categoria'], $_POST['editora']);
+                        if((isset($_POST['livro_descricao']) || isset($_POST['dataPublicacao']) || isset($_POST['autor_codigo']) || isset($_POST['categoria_codigo']) || isset($_POST['editora_codigo']))) {                    
+                            $oLivro->alterarLivro(($_GET['registro']), ($_POST['livro_descricao']), ($_POST['livro_dataPublicacao']), ($_POST['categoria']), ($_POST['autor']), ($_POST['editora']));
                         }
                         
                     ?>
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="livro_dataPublicacao" name="livro_dataPublicacao" value="<?php echo $resultado[0]['livro_dataPublicacao']?>">
+                        <input type="date" class="form-control" id="livro_dataPublicacao" name="livro_dataPublicacao" value="<?php echo $resultado[0]['livro_dataPublicacao']?>">
                         <label for="livro_dataPublicacao">Data Publicacação</label>
                     </div>
 

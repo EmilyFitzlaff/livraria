@@ -60,7 +60,8 @@
             if(isset($_POST['alterar'])) {
                 try {
                     $stmt = Conexao::Conectar()->prepare("UPDATE autor set nome = '{$nome}', nacionalidade = '{$nacionalidade}' WHERE codigo = {$codigo}");
-
+                    
+                
                     $stmt->execute();
 
                     if (!$stmt->execute()){
@@ -81,11 +82,11 @@
         public function montaSelect($descricao, $selected) {
             $aDados = $this->returnSelectAll();
             echo "<label for='autor'>{$descricao}</label>";
-            echo "<select name='autor' class='form-control'>";            
-            foreach ($aDados as $oObjeto){
-                if (empty($selected)) {
-                    echo "<option disabled selected>Selecione um autor</option>";
-                }
+            echo "<select name='autor' class='form-control'>";    
+            if (empty($selected)) {
+                echo "<option disabled selected>Selecione um autor</option>";
+            }        
+            foreach ($aDados as $oObjeto){                
                 if(!empty($selected) && ($selected = $oObjeto->getCodigo())) {
                     echo "<option value='{$oObjeto->getCodigo()}' selected>{$oObjeto->getDescricao()}</option>";
                 } else {

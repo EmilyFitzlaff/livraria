@@ -56,8 +56,12 @@
                             <td><?php echo $oObjeto->getAutor()->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getEditora()->getDescricao(); ?></td>
                             <td>
-                                <a href='livro-alterar.view.php?acao=alterar&registro=<?php echo $oObjeto->getCodigo()?>' class="green">Alterar</a> |                         
-                                <a href='livro-excluir.view.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red">Excluir</a>
+                                <button type="button" class="btn btn-success">
+                                    <a href='livro-alterar.view.php?acao=alterar&registro=<?php echo $oObjeto->getCodigo()?>' class="green" style="color: white; text-decoration: none;">Alterar</a>
+                                </button>  
+                                <button type="button" class="btn btn-danger">                    
+                                    <a href='livro-excluir.view.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red" style="color: white; text-decoration: none;">Excluir</a>
+                                </button>
                             </td>
                         </tr>
                         <?php

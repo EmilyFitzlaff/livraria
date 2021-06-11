@@ -50,8 +50,12 @@
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getObservacao(); ?></td>
                             <td>
-                                <a href='categoria-alterar.view.php?acao=alterar&registro=<?php echo $oObjeto->getCodigo()?>' class="green">Alterar</a> |                         
-                                <a href='categoria-excluir.view.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red">Excluir</a>
+                                <button type="button" class="btn btn-success">
+                                    <a href='categoria-alterar.view.php?acao=alterar&registro=<?php echo $oObjeto->getCodigo()?>' class="green" style="color: white; text-decoration: none;">Alterar</a>
+                                </button>
+                                <button type="button" class="btn btn-danger">                        
+                                    <a href='categoria-excluir.view.php?acao=deletar&registro=<?php echo $oObjeto->getCodigo()?>' class="red" style="color: white; text-decoration: none;">Excluir</a>
+                                </button>
                             </td>
                         </tr>
                         <?php
