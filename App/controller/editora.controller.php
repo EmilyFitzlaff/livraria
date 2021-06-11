@@ -78,5 +78,16 @@
                 }
             }
         }
+
+        public function montaSelect($descricao) {
+            $aDados = $this->returnSelectAll();
+            echo "<label for='editora'>{$descricao}</label>";
+            echo "<select name='editora' class='form-control'>";
+            echo "<option disabled selected>Selecione uma editora</option>";            
+            foreach ($aDados as $oObjeto){
+                echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getDescricao()}</option>";
+            }
+            echo "</select>";
+        }
     }
 ?>

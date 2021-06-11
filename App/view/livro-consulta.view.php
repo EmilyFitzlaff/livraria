@@ -49,7 +49,7 @@
                         foreach ($aDados as $oObjeto) {
                         ?>
                         <tr>
-                            <td scope="row"><?php echo $oObjeto->getCodigo();?></td>
+                            <td><?php echo $oObjeto->getCodigo();?></td>
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getDataPublicacao(); ?></td>
                             <td><?php echo $oObjeto->getCategoria()->getDescricao(); ?></td>
