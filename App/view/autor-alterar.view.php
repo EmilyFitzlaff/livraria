@@ -33,7 +33,7 @@
                 <form method="POST">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="descricao" name="descricao" value="<?php echo $resultado[0]['nome']?>">
-                        <label for="descricao" required>Nome</label>
+                        <label for="descricao">Nome</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" value="<?php echo $resultado[0]['nacionalidade']?>">                        

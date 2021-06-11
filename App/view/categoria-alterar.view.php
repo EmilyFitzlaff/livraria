@@ -33,7 +33,7 @@
                 <form method="POST">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="descricao" name="descricao" value="<?php echo $resultado[0]['descricao']?>">
-                        <label for="descricao" required>Descrição</label>
+                        <label for="descricao">Descrição</label>
                     </div>
                     <div class="form-floating mb-3">
                         <textarea class="form-control" placeholder="Deixe sua observação aqui" name="observacao" id="observacao" style="height: 100px" value="<?php echo $resultado[0]['observacao']?>"></textarea>

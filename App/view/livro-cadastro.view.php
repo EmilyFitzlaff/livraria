@@ -18,11 +18,11 @@
                 </p>
                 <form method="POST">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Informe a descrição do livro">
-                        <label for="descricao" required>Descrição</label>
+                        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Informe a descrição do livro" required>
+                        <label for="descricao">Descrição</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="date" class="form-control" id="dataPublicacao" name="dataPublicacao" placeholder="Informe a data de publicação">
+                        <input type="date" class="form-control" id="dataPublicacao" name="dataPublicacao" placeholder="Informe a data de publicação" required>
                         <label for="dataPublicacao">Data de Publicação</label>
                     </div>        
                     <div class="form mb-3">

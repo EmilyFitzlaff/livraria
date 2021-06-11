@@ -18,11 +18,11 @@
                 </p>
                 <form method="POST">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Informe o CNPJ da editora">
-                        <label for="cnpj" required>CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Informe o CNPJ da editora" required>
+                        <label for="cnpj">CNPJ</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Informe o nome fantasia">
+                        <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Informe o nome fantasia" required>
                         <label for="nomeFantasia">Nome/Razão</label>
                     </div>    
                     <div class="form-floating mb-3">

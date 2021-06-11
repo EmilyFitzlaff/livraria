@@ -49,12 +49,12 @@
                 <form method="POST">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="livro_descricao" name="livro_descricao" value="<?php echo $resultado[0]['livro_descricao']?>">
-                        <label for="livro_descricao" required>Descrição</label>
+                        <label for="livro_descricao">Descrição</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="livro_dataPublicacao" name="livro_dataPublicacao" value="<?php echo $resultado[0]['livro_dataPublicacao']?>">
-                        <label for="livro_dataPublicacao" required>Data Publicacação</label>
+                        <label for="livro_dataPublicacao">Data Publicacação</label>
                     </div>
 
                     <div class="form mb-3">

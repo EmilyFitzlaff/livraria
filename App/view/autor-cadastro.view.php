@@ -18,8 +18,8 @@
                 </p>
                 <form method="POST">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o nome do autor">
-                        <label for="nome" required>Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o nome do autor" required>
+                        <label for="nome">Nome</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Informe a nacionalidade do autor">

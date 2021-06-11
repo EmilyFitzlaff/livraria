@@ -60,7 +60,7 @@
         public function alterarEditora($codigo, $nome, $cnpj, $telefone){
             if(isset($_POST['alterar'])) {
                 try {
-                    $stmt = Conexao::Conectar()->prepare("UPDATE editora set nomeFantasia = '{$nome}', cnpj = '{$cnpj}', telefone = $telefone WHERE codigo = {$codigo}");
+                    $stmt = Conexao::Conectar()->prepare("UPDATE editora set nomeFantasia = '{$nome}', cnpj = '{$cnpj}', telefone = '$telefone' WHERE codigo = {$codigo}");
 
                     $stmt->execute();
 
@@ -82,7 +82,7 @@
         public function montaSelect($descricao, $selected) {
             $aDados = $this->returnSelectAll();
             echo "<label for='editora'>{$descricao}</label>";
-            echo "<select name='editora' class='form-control'>";         
+            echo "<select name='editora' class='form-control' required>";         
             foreach ($aDados as $oObjeto){
                 if (empty($selected)) {
                     echo "<option disabled selected>Selecione uma editora</option>";
