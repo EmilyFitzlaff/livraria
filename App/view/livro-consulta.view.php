@@ -12,7 +12,7 @@
             <?php
                 require_once('menu.view.php');
 
-                $oLivro = new Controller_Editora();
+                $oLivro = new Controller_Livro();
                 $aDados = $oLivro->returnSelectAll();
             ?>
             <div class="container">

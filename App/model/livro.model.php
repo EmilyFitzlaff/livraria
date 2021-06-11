@@ -1,9 +1,5 @@
 <?php
 
-    require_once('autor.model.php');
-    require_once('editora.model.php');
-    require_once('categoria.model.php');
-    
     /**
      * @var Livro model da tabela mydb.livro
      */
@@ -55,7 +51,7 @@
             return $this->Autor;
         }
 
-        public function setAutor(Autor $autor) {
+        public function setAutor(Model_Autor $autor) {
             $this->Autor = $autor;
         } 
 
@@ -63,7 +59,7 @@
             return $this->Categoria;
         }
 
-        public function setCategoria(Categoria $categoria) {
+        public function setCategoria(Model_Categoria $categoria) {
             $this->Categoria = $categoria;
         } 
 
@@ -71,7 +67,7 @@
             return $this->Editora;
         }
 
-        public function setEditora(Editora $editora) {
+        public function setEditora(Model_Editora $editora) {
             $this->Editora = $editora;
         } 
     }

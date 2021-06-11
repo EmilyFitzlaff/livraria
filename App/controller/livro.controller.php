@@ -1,6 +1,10 @@
 <?php
 
     require_once('conexao.controller.php');
+
+    require_once('../model/autor.model.php');
+    require_once('../model/editora.model.php');
+    require_once('../model/categoria.model.php');
     
     class Controller_Livro {
         /**
@@ -12,7 +16,10 @@
                                                              c.codigo as categoria_codigo,
                                                              c.descricao as categoria_descricao,
                                                              a.codigo as autor_codigo,
-                                                             a.nome as autor_descricao                                                             
+                                                             a.nome as autor_descricao,
+                                                             l.codigo as livro_codigo,
+                                                             l.descricao as livro_descricao,
+                                                             l.dataPublicacao as livro_dataPublicacao                                                          
                                                         FROM livro l
                                                         join editora e on e.codigo = l.editora_codigo
                                                         join categoria c on c.codigo = l.categoria_codigo
@@ -23,9 +30,9 @@
             
             while($aLinha = $consulta->fetch(PDO::FETCH_ASSOC)) {
                 $oLivro = new Model_Livro;
-                $oLivro->setCodigo($aLinha['codigo']);
-                $oLivro->setDescricao($aLinha['descricao']);
-                $oLivro->setDataPublicacao($aLinha['dataPublicacao']);
+                $oLivro->setCodigo($aLinha['livro_codigo']);
+                $oLivro->setDescricao($aLinha['livro_descricao']);
+                $oLivro->setDataPublicacao($aLinha['livro_dataPublicacao']);
 
                 $oEditora = new Model_Editora;
                 $oEditora->setCodigo($aLinha['editora_codigo']);
