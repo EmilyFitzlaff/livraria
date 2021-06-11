@@ -81,7 +81,7 @@
         public function montaSelect($descricao, $selected) {
             $aDados = $this->returnSelectAll();
             echo "<label for='autor'>{$descricao}</label>";
-            echo "<select name='autor' class='form-control' required>";            
+            echo "<select name='autor' class='form-control'>";            
             foreach ($aDados as $oObjeto){
                 if (empty($selected)) {
                     echo "<option disabled selected>Selecione um autor</option>";

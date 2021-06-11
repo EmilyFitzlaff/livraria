@@ -80,7 +80,7 @@
         public function montaSelect($descricao, $selected) {
             $aDados = $this->returnSelectAll();
             echo "<label for='categoria'>{$descricao}</label>";
-            echo "<select name='categoria' class='form-control' required>";
+            echo "<select name='categoria' class='form-control'>";
             echo $selected;
             foreach ($aDados as $oObjeto){
                 if (empty($selected)) {
