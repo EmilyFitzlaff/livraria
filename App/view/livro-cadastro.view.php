@@ -22,29 +22,25 @@
                         <label for="descricao" required>Descrição</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="dataPublicacao" name="dataPublicacao" placeholder="Informe a data de publicação">
+                        <input type="date" class="form-control" id="dataPublicacao" name="dataPublicacao" placeholder="Informe a data de publicação">
                         <label for="dataPublicacao">Data de Publicação</label>
-                    </div>    
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Informe o telefone">
-                        <label for="telefone">Telefone</label>
-                    </div>      
+                    </div>        
                     <div class="form mb-3">
                         <?php 
                             $oEditora = new Controller_Editora;
-                            $oEditora->montaSelect("Editora");
+                            $oEditora->montaSelect("Editora", "");
                         ?>
                     </div> 
                     <div class="form mb-3">
                         <?php 
                             $oCategoria = new Controller_Categoria;
-                            $oCategoria->montaSelect("Categoria");
+                            $oCategoria->montaSelect("Categoria", "");
                         ?>
                     </div> 
                     <div class="form mb-3">
                         <?php 
                             $oAutor = new Controller_Autor;
-                            $oAutor->montaSelect("Autor");
+                            $oAutor->montaSelect("Autor", "");
                         ?>
                     </div>           
                     <button type="submit" class="btn btn-success" value="cadastrar" name="acaoCadastrar">Cadastrar</button>

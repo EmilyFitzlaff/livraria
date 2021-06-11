@@ -79,13 +79,19 @@
             }
         }
 
-        public function montaSelect($descricao) {
+        public function montaSelect($descricao, $selected) {
             $aDados = $this->returnSelectAll();
             echo "<label for='editora'>{$descricao}</label>";
-            echo "<select name='editora' class='form-control'>";
-            echo "<option disabled selected>Selecione uma editora</option>";            
+            echo "<select name='editora' class='form-control'>";         
             foreach ($aDados as $oObjeto){
-                echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getDescricao()}</option>";
+                if (empty($selected)) {
+                    echo "<option disabled selected>Selecione uma editora</option>";
+                }
+                if(!empty($selected) && ($selected = $oObjeto->getCodigo())) {
+                    echo "<option value='{$oObjeto->getCodigo()}' selected>{$oObjeto->getDescricao()}</option>";
+                } else {
+                    echo "<option value='{$oObjeto->getCodigo()}'>{$oObjeto->getDescricao()}</option>";
+                } 
             }
             echo "</select>";
         }

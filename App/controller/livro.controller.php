@@ -52,7 +52,7 @@
 
                 $oLivro->setAutor($oAutor);
                 
-                $aResultado[] = $oEditora;
+                $aResultado[] = $oLivro;
             }
             return $aResultado;  
         }
